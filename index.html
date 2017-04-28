@@ -1,0 +1,41 @@
+<html>
+<body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.2/themes/default/style.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.2/jstree.min.js"></script>
+
+<script type="text/javascript" src="./AgaveFileBrowser.js"></script>
+
+<h1>Agave File Browser Demo</h1>
+
+<button id="select">Select</button><input id="selected" size=60/>
+<div style="min-height:80%;max-height:50%;overflow:auto;border:1px solid lightgray;">
+	<div id="browser"></div>
+</div>	
+
+<script type="text/javascript">
+const USER_NAME        = "yourusername"; 
+const AGAVE_FILE_URL   = "https://agave.iplantc.org/files/v2/listings";
+const AGAVE_AUTH_TOKEN = "yourtoken";
+
+$(function() {
+	let browser = new AgaveFileBrowser({ 
+		elementId: "browser",
+		userName:  USER_NAME,
+		baseUrl:   AGAVE_FILE_URL,
+		authToken: AGAVE_AUTH_TOKEN,
+		selectCallback: function(node) {
+			$('#selected').val(node.id);
+		}
+	});
+
+	$('#select').click(function() {
+		alert( $('#selected').val() );
+	})
+});
+</script>
+
+</body>
+</html>
