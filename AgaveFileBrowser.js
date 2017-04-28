@@ -92,7 +92,8 @@ class AgaveFileBrowser {
                 	function(event) {
 						let node = $(event.target).closest("li");
    						self.node = self.element.jstree().get_node(node[0].id);
-   						setTimeout(self.update.bind(self, node[0].id), 10);
+                        if (self.node.data.type === 'dir' && !self.node.data.opened)
+   						   setTimeout(self.update.bind(self, node[0].id), 10);
                 	}
                 )
                 .show();
@@ -100,7 +101,7 @@ class AgaveFileBrowser {
             return;
 		}
 
-		if (self.node && !self.node.data.opened) {
+		if (self.node) {
 			items.forEach(function(item) {
 				self.element.jstree().create_node(self.node, item, "last");
 			});
