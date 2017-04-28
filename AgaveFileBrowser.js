@@ -100,11 +100,12 @@ class AgaveFileBrowser {
             return;
 		}
 
-		if (self.node) {
+		if (self.node && !self.node.data.opened) {
 			items.forEach(function(item) {
 				self.element.jstree().create_node(self.node, item, "last");
 			});
 			self.element.jstree().open_node(self.node);
+            self.node.data.opened = true;
 		}
 	}
 
