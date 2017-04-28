@@ -13,6 +13,7 @@ class AgaveFileBrowser {
         this.baseUrl   = params.baseUrl;
         this.authToken = params.authToken;
         this.selectCallback = params.selectCallback;
+        this.formatCallback = params.formatCallback;
 
         // Initialize contents
         self.treeInit = false;
@@ -51,6 +52,10 @@ class AgaveFileBrowser {
 			console.warn('Empty response from server');
 			return;
 		}
+
+        if (this.formatCallback)
+            return this.formatCallback.call(this, contents);
+
 	 	return contents.result.filter(function(item) { return (item.name != '.') }).map(function(item) {
 	 		return { 
 	 			id: item.path, 
