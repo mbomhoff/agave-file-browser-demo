@@ -1,0 +1,16 @@
+.tree-view-folder-closed:before {
+    content: "\25b8 "
+}
+
+.tree-view-folder-open:before {
+    content: "\25be "
+}
+
+ul.tree-view-node {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li.tree-view-node {
+    padding-left: 2em;
+}
