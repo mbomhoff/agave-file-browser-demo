@@ -5,9 +5,9 @@ import './index.css';
 
 ReactDOM.render(
     <AgaveFileBrowser
-        username={"mbomhoff"}
+        username={"yourusername"}
         baseUrl={"https://agave.iplantc.org/files/v2/listings/"}
-        token={"c1aa8a4afad7c1805277623f3b98278"}
+        token={"yourtoken"}
     />,
     document.getElementById('root')
 );
