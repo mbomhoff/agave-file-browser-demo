@@ -1,6 +1,6 @@
 Agave File Browser Demo
 -----------------------
 
-A simple Agave Data Store client using jQuery and jsTree.
+A simple Cyverse Data Store client using jQuery/jsTree and the Agave API.
 
-![Screenshot](https://raw.githubusercontent.com/mbomhoff/agave-file-browser-demo/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/mbomhoff/agave-file-browser-demo/master/jQuery/screenshot.png)
