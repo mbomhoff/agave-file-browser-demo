@@ -1,7 +1,7 @@
 Agave File Browser Demo
 -----------------------
 
-A simple Agave Data Store client using React.
+A simple CyVerse Data Store client using React and the Agave API.
 
 ```
 npm install
