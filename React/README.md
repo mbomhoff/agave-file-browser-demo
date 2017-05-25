@@ -8,4 +8,4 @@ npm install
 npm start
 ```
 
-![Screenshot](https://raw.githubusercontent.com/mbomhoff/agave-file-browser-demo/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/mbomhoff/agave-file-browser-demo/master/React/screenshot.png)
