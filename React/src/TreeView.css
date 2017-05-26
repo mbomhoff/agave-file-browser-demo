@@ -8,9 +8,19 @@
 
 ul.tree-view-node {
     list-style-type: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
 }
 
 li.tree-view-node {
     padding-left: 2em;
+}
+
+.tree-view-node-label:hover {
+    background-color: lightblue;
+}
+
+.TreeView {
+    border: 1px solid lightgray;
+    padding: 5px;
 }

@@ -4,13 +4,15 @@ import './TreeView.css';
 class TreeView extends React.Component {
     render() {
         return (
-            <TreeNode
-                name={this.props.path}
-                path={this.props.path}
-                type={"dir"}
-                loadCallback={this.props.loadCallback}
-                autoOpen={true}
-            />
+            <div className="TreeView">
+                <TreeNode
+                    name={this.props.path}
+                    path={this.props.path}
+                    type={"dir"}
+                    loadCallback={this.props.loadCallback}
+                    autoOpen={true}
+                />
+            </div>
         );
     }
 }
@@ -31,12 +33,13 @@ class TreeNode extends React.Component {
             this.handleClick();
     }
 
-    handleClick() {
-        console.log("handleClick");
+    handleClick(event) {
+        if (event)
+            event.preventDefault();
+
         if (this.props.type !== 'dir')
             return;
 
-        //this.setState({ collapsed: !this.state.collapsed });
         this.setState(prevState => ({
             collapsed: !prevState.collapsed
         }));
@@ -57,8 +60,8 @@ class TreeNode extends React.Component {
         }
 
         return (
-            <ul className={iconClass} onClick={this.handleClick}>
-                {this.props.name}
+            <ul className={iconClass}>
+                <span className="tree-view-node-label" onClick={this.handleClick}>{this.props.name}</span>
                 <li className="tree-view-node">
                     {this.state.children.map((node, index) =>
                         <TreeNode
