@@ -17,6 +17,11 @@ li.tree-view-node {
 }
 
 .tree-view-node-label:hover {
+    background-color: lightcyan;
+    cursor: pointer;
+}
+
+.tree-view-node-selected {
     background-color: lightblue;
 }
 

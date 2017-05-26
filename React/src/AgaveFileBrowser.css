@@ -1,3 +1,6 @@
 .AgaveFileBrowser {
-    margin: 1em;
+    padding: 0.5em;
+    min-height: 80%;
+    max-height: 50%;
+    overflow:auto;
 }
