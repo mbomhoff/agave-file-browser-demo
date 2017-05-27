@@ -1,0 +1,20 @@
+{
+  "name": "agave-file-browser-demo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A simple CyVerse Data Store client using the Agave API",
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "html5-boilerplate": "^5.3.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 ./src"
+  }
+}
