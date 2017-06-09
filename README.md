@@ -1,8 +1,7 @@
 Agave File Browser Demo
 -----------------------
 
-A simple Cyverse Data Store client using the Agave API.
+A simple Cyverse Data Store client using the Agave API, implemented in several popular front-end frameworks.
 
-There are currently two flavors:  jQuery and React
+There are currently four flavors:  jQuery, React, Angular, and Elm
 
-More using other popular frameworks will be added soon.
